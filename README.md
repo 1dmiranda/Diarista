@@ -37,7 +37,6 @@ Vandeir Carvalho  | 561711
 
 Datas | Eventos
 ----- | -------
-
 24/10/2018  | Inicio do Planejamento
 25/10/2018  | Desenvolvimento Login, Criação do usuário
 26/10/2018  | Criação Painel Diarista
@@ -66,7 +65,6 @@ Editor de Texto | Visual Studio Enterprise
 
 Código  | Título  | Situação
 ------  | ------  | -------
-
 1 | Cadastro de conta | Concluído
 2 | Login no sistema | Concluído
 3 | Painel da diarista | Concluído
