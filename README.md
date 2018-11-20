@@ -50,7 +50,7 @@ Datas | Eventos
 
 Requisitos  | Ferramentas
 ----------  | -----------
-Navegadores | Mozilla Firefox, Google Chrome, Internet Explorer
+Navegadores | Mozilla Firefox, Google Chrome, Internet Explorer, Safari
 Sistemas Operacional  | Linux, Windows, MacOS
 
 ## Tecnologias
