@@ -12,7 +12,7 @@ Vandeir Carvalho  | 561711
 - JavaScript
 - Jquery
 - CSS
--C#
+- C#
 - Bootstrap
 - Azure para hospedagem
 - GitHub para versionamento
@@ -23,10 +23,11 @@ Vandeir Carvalho  | 561711
 -Sistema pra gerir o contato de diaristas e clientes
 
 ## Entradas personalizadas para :
--Cadastro de clientes
--Cadastro de diaristas
--Criação de serviço
--Aceita e recusa de serviço
+- Cadastro de clientes
+- Cadastro de diaristas
+- Criação de serviço
+- Aceita e recusa de serviço
+- Avaliação do serviço
 
 ## Limitações
 - Só roda no browser
