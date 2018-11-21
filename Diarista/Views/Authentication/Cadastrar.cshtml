@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-md-10 col-md-offset-1">
                         <div class="form-group">
-                            @Html.Label("Descricao", htmlAttributes: new { @class = "control-label" })
+                            @Html.Label("Descreva seu perfil", htmlAttributes: new { @class = "control-label" })
                                 @Html.EditorFor(model => model.Descricao, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.Descricao, "", new { @class = "text-danger" })
                         </div>
@@ -80,11 +80,8 @@
                 </div>
                     <div class="row">
                         <div class="form-group">
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-md-offset-3">
                                 <button type="submit" class="btn btn-success">Cadastrar</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="btn btn-default">@Html.ActionLink("Voltar", "Index")</button>
                             </div>
                         </div>
                     </div>

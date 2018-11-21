@@ -20,13 +20,10 @@
                         @Html.DisplayName("Contratante")
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.DataPublicacao)
+                        @Html.DisplayName("Data da Contratação")
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.DataContratacao)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Descricao)
+                        @Html.DisplayName("Descrição")
                     </th>
                     <th>
                         @Html.DisplayName("Status do Serviço")
@@ -39,9 +36,6 @@
                     <tr>
                         <td>
                             @Html.DisplayName(item.Contratante != null ? item.Contratante.Nome : "-")
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DataPublicacao)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.DataContratacao)

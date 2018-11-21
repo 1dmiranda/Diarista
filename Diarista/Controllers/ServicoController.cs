@@ -30,9 +30,9 @@ namespace Diarista.Controllers
         [Autorizar(Roles = "Cliente")]
         public ActionResult Cadastrar(Servico servico)
         {
+            var user = GetUser();
             if (ModelState.IsValid)
             {
-                var user = GetUser();
                 var s = new Servico
                 {
                     DataContratacao = servico.DataContratacao,
@@ -46,9 +46,11 @@ namespace Diarista.Controllers
                 db.Servicos.Add(s);
                 db.SaveChanges();
                 s = db.Servicos.Include("Diarista.Usuario").Include("Casa").Include("Contratante").First(e => e.Id == s.Id);
-                ns.NotificarDiarista(s);
+                //ns.NotificarDiarista(s);
                 return RedirectToAction("Index", "Cliente");
             }
+            ViewBag.Casas = new SelectList(db.Casas.Where(c => c.PerfilId == user.Perfil.Cpf).ToList(), "Id", "Descricao");
+            ViewBag.Diaristas = new SelectList(db.Perfis.Where(p => p.TipoUsuario == Classifiers.TipoUsuario.Diarista).ToList(), "Cpf", "Nome");
             return View();
         }
     }

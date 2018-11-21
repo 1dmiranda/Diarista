@@ -128,8 +128,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Diarista.dll" />
-    <Content Include="bin\Diarista.pdb" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\icon-ecologico.png" />
@@ -156,9 +154,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\procurasediarista - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\procurasediarista - FTP1.pubxml" />
     <None Include="Properties\PublishProfiles\procurasediarista - Web Deploy.pubxml" />
-    <None Include="Properties\PublishProfiles\procurasediarista - Web Deploy1.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -181,6 +177,7 @@
     <Compile Include="Controllers\DiaristaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicoController.cs" />
+    <Compile Include="Functions\Authentication.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

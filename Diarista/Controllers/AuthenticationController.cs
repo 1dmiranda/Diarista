@@ -1,5 +1,6 @@
 ﻿using Diarista.Authorization;
 using Diarista.Data;
+using Diarista.Functions;
 using Diarista.Models;
 using Diarista.ViewModels;
 using System;
@@ -15,9 +16,8 @@ namespace Diarista.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public ActionResult Login(string returnUrl)
+        public ActionResult Login()
         {
-            ViewBag.ReturnUrl = returnUrl;
             return View();
         }
 
@@ -29,36 +29,20 @@ namespace Diarista.Controllers
         /// <returns></returns>
         // GET: Authentication
         [HttpPost]
-        public ActionResult Login(string email, string password, string ReturnURL)
+        public ActionResult Login(string email, string password)
         {
             try
             {
-                using (var db = new DatabaseContext())
-                {
-                    var users = db.Users;
-                    var usuario = users.Include("Perfil").Where(u => u.Email == email).FirstOrDefault();
+                var usuario = Authentication.Login(email, password); 
+                    
+                Session.Add("Usuario", usuario);
+                FormsAuthentication.SetAuthCookie(usuario.Email, true);
 
-                    if (usuario == null)
-                        throw new Exception("Usuário Inválido");
+                if (usuario.Perfil.TipoUsuario == Classifiers.TipoUsuario.Diarista)
+                    return RedirectToAction("Index", "Diarista");
+                else
+                    return RedirectToAction("Index", "Cliente");
 
-                    if (usuario.Password != password)
-                        throw new Exception("Senha Incorreta");
-
-                    Session.Add("Usuario", usuario);
-                    FormsAuthentication.SetAuthCookie(usuario.Email, true);
-
-                    ViewData["Model"] = User;
-
-                    if (!string.IsNullOrEmpty(ReturnURL))
-                        return Redirect(ReturnURL);
-                    else
-                    {
-                        if (usuario.Perfil.TipoUsuario == Classifiers.TipoUsuario.Diarista)
-                            return RedirectToAction("Index", "Diarista");
-                        else
-                            return RedirectToAction("Index", "Cliente");
-                    }
-                }
             }
             catch (Exception ex)
             {
@@ -73,6 +57,7 @@ namespace Diarista.Controllers
                 return View();
             return HttpNotFound();
         }
+
         [HttpPost]
         public ActionResult Cadastrar(CadastroUsuario cadastro)
         {
@@ -93,7 +78,7 @@ namespace Diarista.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public ActionResult Logoff(string ReturnURL)
+        public ActionResult Logoff()
         {
             // Perform Logoff operation
             Session.RemoveAll();
@@ -102,8 +87,7 @@ namespace Diarista.Controllers
 
             FormsAuthentication.SignOut();
 
-            // Redirect
-            return RedirectToAction(nameof(Login), new { ReturnURL });
+            return View();
         }
         [Autorizar]
         public ActionResult TesteLogado()

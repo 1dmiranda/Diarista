@@ -37,7 +37,7 @@ namespace Diarista.Controllers
             db.Entry(servico).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             var s = db.Servicos.Include("Contratante.Usuario").Include("Diarista").First(e => e.Id == id);
-            ns.NotificarCliente(s);
+            //ns.NotificarCliente(s);
             return RedirectToAction("Index");
         }
         public ActionResult Aceitar(int id)
@@ -51,7 +51,7 @@ namespace Diarista.Controllers
             db.Entry(servico).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             var s = db.Servicos.Include("Contratante.Usuario").Include("Diarista").First(e => e.Id == id);
-            ns.NotificarCliente(s);
+            //ns.NotificarCliente(s);
             return RedirectToAction("Index");
         }
     }

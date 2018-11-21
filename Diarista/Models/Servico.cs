@@ -1,5 +1,6 @@
 ﻿using Diarista.Classifiers;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Diarista.Models
 {
@@ -16,6 +17,8 @@ namespace Diarista.Models
         public Casa Casa { get; set; }
         public StatusServico Status { get; set; }
         public DateTime DataPublicacao { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataContratacao { get; set; }
     }
 }

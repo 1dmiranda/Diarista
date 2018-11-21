@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diarista", "Diarista\Diarista.csproj", "{DBA733F8-17EE-445E-BF57-5C8ED53E6812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diarista.Tests", "Diarista.Tests\Diarista.Tests.csproj", "{2FBB2355-3F92-49F5-ADA5-F3592EECBE74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{57832A0C-0C90-4D6B-9E07-D2A7C778025F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{DBA733F8-17EE-445E-BF57-5C8ED53E6812}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBA733F8-17EE-445E-BF57-5C8ED53E6812}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBA733F8-17EE-445E-BF57-5C8ED53E6812}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2FBB2355-3F92-49F5-ADA5-F3592EECBE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FBB2355-3F92-49F5-ADA5-F3592EECBE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FBB2355-3F92-49F5-ADA5-F3592EECBE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FBB2355-3F92-49F5-ADA5-F3592EECBE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57832A0C-0C90-4D6B-9E07-D2A7C778025F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57832A0C-0C90-4D6B-9E07-D2A7C778025F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57832A0C-0C90-4D6B-9E07-D2A7C778025F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57832A0C-0C90-4D6B-9E07-D2A7C778025F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
