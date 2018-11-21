@@ -87,7 +87,7 @@ namespace Diarista.Controllers
 
             FormsAuthentication.SignOut();
 
-            return View();
+            return RedirectToAction(nameof(Login));
         }
         [Autorizar]
         public ActionResult TesteLogado()
