@@ -18,14 +18,27 @@ namespace Teste
             User user = Authentication.Login("barbosamiranda418@hotmail.com", "123");
 
             Assert.AreEqual("barbosamiranda418@hotmail.com", user.Email);
+            Assert.AreEqual("123", user.Password);
         }
 
         [TestMethod]
         [ExpectedException(typeof(Exception))]
-        public void TestLoginException()
+        public void TestLoginExceptionUser()
         {
             User user = Authentication.Login("barbosa@hotmail.com", "123");
 
+            Assert.AreEqual("barbosamiranda418@hotmail.com", user.Email);
+            Assert.AreEqual("123", user.Password);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void TestLoginExceptionPassword()
+        {
+            User user = Authentication.Login("barbosamiranda418@hotmail.com", "1234");
+
+            Assert.AreEqual("barbosamiranda418@hotmail.com", user.Email);
+            Assert.AreEqual("123", user.Password);
         }
     }
 }
