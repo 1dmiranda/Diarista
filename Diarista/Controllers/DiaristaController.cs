@@ -14,11 +14,13 @@ namespace Diarista.Controllers
 
         public DiaristaController()
         {
+
         }
         private User GetUser()
         {
             return (User)Session["Usuario"];
         }
+
         [Autorizar(Roles = "Diarista")]
         public ActionResult Index()
         {
@@ -26,6 +28,7 @@ namespace Diarista.Controllers
             var servicos = db.Servicos.Include("Contratante").Where(s => s.DiaristaId == user.Perfil.Cpf).ToList();
             return View(servicos);
         }
+
         public ActionResult Recusar(int id)
         {
             var servico = db.Servicos.Find(id);
@@ -40,7 +43,8 @@ namespace Diarista.Controllers
             //ns.NotificarCliente(s);
             return RedirectToAction("Index");
         }
-        public ActionResult Aceitar(int id)
+
+                public ActionResult Aceitar(int id)
         {
             var servico = db.Servicos.Find(id);
             if (servico == null)

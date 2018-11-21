@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Web.Mvc;
+using Diarista.Controllers;
+using Diarista.Data;
 using Diarista.Functions;
 using Diarista.Models;
+using Diarista.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Teste

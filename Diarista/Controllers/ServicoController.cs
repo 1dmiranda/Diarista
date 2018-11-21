@@ -18,6 +18,7 @@ namespace Diarista.Controllers
         {
             return (User)Session["Usuario"];
         }
+
         [Autorizar]
         public ActionResult Cadastrar()
         {
@@ -26,6 +27,7 @@ namespace Diarista.Controllers
             ViewBag.Diaristas = new SelectList(db.Perfis.Where(p => p.TipoUsuario == Classifiers.TipoUsuario.Diarista).ToList(), "Cpf", "Nome");
             return View();
         }
+
         [HttpPost]
         [Autorizar(Roles = "Cliente")]
         public ActionResult Cadastrar(Servico servico)

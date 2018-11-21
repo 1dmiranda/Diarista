@@ -37,7 +37,7 @@ namespace Diarista.ViewModels
                     Casas = new List<Casa>{
                         new Casa
                         {
-                            Descricao = "Seu Docimílio",
+                            Descricao = "Residencia",
                             Endereco = c.Endereco
                         }
                     }
